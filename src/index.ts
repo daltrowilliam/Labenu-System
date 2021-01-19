@@ -3,6 +3,9 @@ import knex from "knex";
 import cors from "cors";
 import dotenv from "dotenv";
 import { AddressInfo } from "net";
+import { PostStudent } from "./endpoints/PostStudent";
+import { PostTeacher } from "./endpoints/PostTeacher";
+import { PostMission } from "./endpoints/PostMission";
 
 dotenv.config();
 
@@ -21,8 +24,9 @@ const app: Express = express();
 app.use(express.json());
 app.use(cors())
 
-
-
+app.post('/student', PostStudent)
+app.post('/teacher', PostTeacher)
+app.post('/mission', PostMission)
 
 const server = app.listen(process.env.PORT || 3003, () => {
    if (server) {

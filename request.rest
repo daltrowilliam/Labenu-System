@@ -1,0 +1,30 @@
+###PostStudent
+POST http://localhost:3003/student
+Content-Type: application/json
+
+{
+    "name": "Beltrano",
+    "email": "beltrano@email.com",
+    "birth_date": "1971-01-01"
+}
+
+###PostTeacher
+POST http://localhost:3003/teacher
+Content-Type: application/json
+
+{
+    "name": "Ciclano2",
+    "email": "ciclano2@email.com",
+    "birth_date": "1971-01-01"
+}
+
+###PostTeacher
+POST http://localhost:3003/mission
+Content-Type: application/json
+
+{
+    "name": "Dumont",
+    "start_date": "1971-01-01",
+    "end_date": "1971-01-01",
+    "module": 4
+}
