@@ -23,8 +23,7 @@ POST http://localhost:3003/mission
 Content-Type: application/json
 
 {
-    "name": "Dumont",
+    "name": "Dumont3",
     "start_date": "1971-01-01",
-    "end_date": "1971-01-01",
-    "module": 4
+    "end_date": "1971-01-01"
 }

@@ -4,7 +4,7 @@ export default async function createMission(
     name: string,
     start_date: string,
     end_date: string,
-    module: number
+    module: number | undefined
 ):Promise<any> {
     const result = await connection
     .insert({
