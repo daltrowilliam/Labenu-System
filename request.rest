@@ -43,7 +43,7 @@ PUT http://localhost:3003/teacher
 Content-Type: application/json
 
 {
-    "id": "161108503",
+    "id": "161123945",
     "mission_id": "161117099"
 }
 
@@ -55,5 +55,8 @@ GET http://localhost:3003/student/161343w21
 GET http://localhost:3003/student/mission/143
 
 
-###GetStudentByMission
-GET http://localhost:3003/teacher/mission/1
+###GetTeacherByMission
+GET http://localhost:3003/teacher/mission/161117099
+
+###DeleteStudent
+DELETE http://localhost:3003/student/10

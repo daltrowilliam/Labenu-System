@@ -11,6 +11,7 @@ import { UpdateTeacher } from "./endpoints/UpdateTeacher";
 import { GetAgeStudent } from "./endpoints/GetAgeStudent";
 import { GetStudentByMission } from "./endpoints/GetStudentByMission";
 import { GetTeacherByMission } from "./endpoints/GetTeacherByMission";
+import { DeleteStudent } from "./endpoints/DeleteStudent";
 
 dotenv.config();
 
@@ -37,6 +38,7 @@ app.put('/teacher', UpdateTeacher)
 app.get('/student/:id', GetAgeStudent)
 app.get('/student/mission/:id', GetStudentByMission)
 app.get('/teacher/mission/:id', GetTeacherByMission)
+app.delete('/student/:id', DeleteStudent)
 
 const server = app.listen(process.env.PORT || 3003, () => {
    if (server) {
