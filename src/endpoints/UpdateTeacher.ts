@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import addTeacher from '../data/addTeacher'
 import getMission from "../data/getMission";
-import getTeacher from "../data/getStudent";
+import getTeacher from "../data/getTeacher";
 
 export const UpdateTeacher = async(req: Request,res: Response): Promise<any> =>{
    let errorCode: number = 400;

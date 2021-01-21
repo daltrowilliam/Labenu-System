@@ -7,6 +7,5 @@ export default async function getTeacher(
     SELECT * FROM Teacher
     WHERE id = ${id};
     `)
-    console.log(result[0])
     return result[0]
  } 
