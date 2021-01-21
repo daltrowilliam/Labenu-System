@@ -34,6 +34,15 @@ PUT http://localhost:3003/student
 Content-Type: application/json
 
 {
-    "id": "161108468",
+    "id": "5",
     "mission_id": "5"
+}
+
+###UpdateTeacher
+PUT http://localhost:3003/teacher
+Content-Type: application/json
+
+{
+    "id": "161108503",
+    "mission_id": "161117099"
 }
