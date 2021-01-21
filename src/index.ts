@@ -6,6 +6,7 @@ import { AddressInfo } from "net";
 import { PostStudent } from "./endpoints/PostStudent";
 import { PostTeacher } from "./endpoints/PostTeacher";
 import { PostMission } from "./endpoints/PostMission";
+import { UpdateStudent } from "./endpoints/UpdateStudent";
 
 dotenv.config();
 
@@ -27,6 +28,7 @@ app.use(cors())
 app.post('/student', PostStudent)
 app.post('/teacher', PostTeacher)
 app.post('/mission', PostMission)
+app.put('/student', UpdateStudent)
 
 const server = app.listen(process.env.PORT || 3003, () => {
    if (server) {

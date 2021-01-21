@@ -18,12 +18,22 @@ Content-Type: application/json
     "birth_date": "1971-01-01"
 }
 
-###PostTeacher
+###PostMission
 POST http://localhost:3003/mission
 Content-Type: application/json
 
 {
-    "name": "Dumont3",
-    "start_date": "1971-01-01",
-    "end_date": "1971-01-01"
+    "name": "Jackson",
+    "start_date": "2021-01-01",
+    "end_date": "2021-07-01",
+    "module": "1"
+}
+
+###UpdateStudent
+PUT http://localhost:3003/student
+Content-Type: application/json
+
+{
+    "id": "161108468",
+    "mission_id": "5"
 }
