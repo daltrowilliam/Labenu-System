@@ -60,3 +60,14 @@ GET http://localhost:3003/teacher/mission/161117099
 
 ###DeleteStudent
 DELETE http://localhost:3003/student/10
+
+
+###RemoveStudentFromMission
+PUT http://localhost:3003/student/161108468
+
+###RemoveTeacherFromMission
+PUT http://localhost:3003/teacher/asdas
+
+
+###GetStudentByHobby
+GET http://localhost:3003/student/hobby/1

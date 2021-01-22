@@ -1,29 +1,33 @@
 import { Request, Response } from "express";
-import getMission from "../data/getMission";
-import getTeacherFromMission from "../data/getTeacherFromMission";
+import getHobby from "../data/getHobby";
+import getHobbyByStudent from "../data/getHobbyByStudent";
 
-export const GetTeacherByMission = async(req: Request,res: Response): Promise<any> =>{
+export const GetStudentsHobby = async(req: Request,res: Response): Promise<any> =>{
    let errorCode: number = 400;
    try {
-      const result = await getTeacherFromMission(
+      if(isNaN(Number(req.params.id))) {
+         errorCode = 422;
+         throw new Error("Id inválido")
+      }
+
+      const hobby = await getHobby(
+         Number(req.params.id)
+         )
+      if (hobby.length===0) {
+         errorCode = 422;
+         throw new Error("Hobby inexistente!")
+      }
+      
+      const result = await getHobbyByStudent(
       Number(req.params.id)
       )
 
-      const mission = await getMission(
-         Number(req.params.id)
-         )
-      if (mission.length===0) {
-         errorCode = 422;
-         throw new Error("Turma inexistente.")
-      }
-
       if (result.length===0) {
          errorCode = 422;
-         throw new Error("Nenhum professor nesta turma.")
+         throw new Error("Nenhum aluno possui esse hobby!")
       }
 
-
-      let teachers = [];
+/*       let teachers = [];
 
       for (let i = 0; i < result.length; i++) {
          let sameName = false;
@@ -45,9 +49,9 @@ export const GetTeacherByMission = async(req: Request,res: Response): Promise<an
                   ]
             })
          }
-      }
+      } */
      
-      res.status(200).send(teachers);
+      res.status(200).send(result);
    } catch (err) {
      res.status(errorCode).send({
        message: err.message
