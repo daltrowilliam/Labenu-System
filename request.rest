@@ -23,10 +23,11 @@ POST http://localhost:3003/mission
 Content-Type: application/json
 
 {
-    "name": "Edson",
+    "name": "Turma",
     "start_date": "2020-05-01",
     "end_date": "2020-11-21",
-    "module": "4"
+    "module": "4",
+    "period": "day"
 }
 
 ###UpdateStudent
