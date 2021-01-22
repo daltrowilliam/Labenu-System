@@ -3,9 +3,9 @@ POST http://localhost:3003/student
 Content-Type: application/json
 
 {
-    "name": "Beltrano",
-    "email": "beltrano@email.com",
-    "birth_date": "1971-01-01"
+    "name": "Daltro",
+    "email": "daltro@email.com",
+    "birth_date": "1975-04-11"
 }
 
 ###PostTeacher
@@ -71,3 +71,12 @@ PUT http://localhost:3003/teacher/asdas
 
 ###GetStudentByHobby
 GET http://localhost:3003/student/hobby/1
+
+###UpdateMissionInStudent
+PUT http://localhost:3003/student/mission
+Content-Type: application/json
+
+{
+    "id": "11",
+    "mission_id": "161117099"
+}

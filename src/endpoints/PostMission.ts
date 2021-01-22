@@ -22,7 +22,7 @@ export const PostMission = async(req: Request,res: Response): Promise<any> =>{
       )
       res.status(200).send("Turma criada com sucesso");
    } catch (err) {
-     res.status(400).send({
+     res.status(errorCode).send({
        message: err.message
      })
    }
