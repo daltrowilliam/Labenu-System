@@ -11,6 +11,11 @@ export const UpdateStudent = async(req: Request,res: Response): Promise<any> =>{
          throw new Error("Preencha todos os campos e tente novamente.")
       }
 
+      if(isNaN(Number(req.body.mission_id)) || isNaN(Number(req.body.id))) {
+         errorCode = 422;
+         throw new Error("Id inválido")
+      }
+
       const student = await getStudent(
       Number(req.body.id)
       )
@@ -34,7 +39,7 @@ export const UpdateStudent = async(req: Request,res: Response): Promise<any> =>{
 
       res.status(200).send("Estudante cadastrado na turma com sucesso");
    } catch (err) {
-     res.status(400).send({
+     res.status(errorCode).send({
        message: err.message
      })
    }

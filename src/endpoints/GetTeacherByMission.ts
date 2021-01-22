@@ -5,6 +5,11 @@ import getTeacherFromMission from "../data/getTeacherFromMission";
 export const GetTeacherByMission = async(req: Request,res: Response): Promise<any> =>{
    let errorCode: number = 400;
    try {
+      if(isNaN(Number(req.params.id))) {
+         errorCode = 422;
+         throw new Error("Id inválido")
+      }
+      
       const result = await getTeacherFromMission(
       Number(req.params.id)
       )

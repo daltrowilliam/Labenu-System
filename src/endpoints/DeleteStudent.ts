@@ -24,7 +24,7 @@ export const DeleteStudent = async(req: Request,res: Response): Promise<any> =>{
 
       res.status(200).send("Estudante apagado com sucesso");
    } catch (err) {
-     res.status(400).send({
+     res.status(errorCode).send({
        message: err.message
      })
    }

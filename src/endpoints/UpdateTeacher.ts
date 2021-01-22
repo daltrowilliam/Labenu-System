@@ -11,6 +11,11 @@ export const UpdateTeacher = async(req: Request,res: Response): Promise<any> =>{
          throw new Error("Preencha todos os campos e tente novamente.")
       }
 
+      if(isNaN(Number(req.body.mission_id)) || isNaN(Number(req.body.id))) {
+         errorCode = 422;
+         throw new Error("Id inválido")
+      }
+
       const teacher = await getTeacher(
       Number(req.body.id)
       )

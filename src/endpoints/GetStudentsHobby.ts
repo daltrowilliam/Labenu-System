@@ -27,30 +27,7 @@ export const GetStudentsHobby = async(req: Request,res: Response): Promise<any> 
          throw new Error("Nenhum aluno possui esse hobby!")
       }
 
-/*       let teachers = [];
-
-      for (let i = 0; i < result.length; i++) {
-         let sameName = false;
-         for (let j = 0; j < i; j++) {
-            if (teachers[j] && result[i].name === teachers[j].name) {
-                  teachers[j].specialtys.push(
-                     result[i].specialty
-                  )
-                  sameName = true;
-                  break;
-            }
-         }
-         if (!sameName) {
-            teachers.push({
-                  name: result[i].name,
-                  email: result[i].email,
-                  specialtys: [
-                     result[i].specialty
-                  ]
-            })
-         }
-      } */
-     
+    
       res.status(200).send(result);
    } catch (err) {
      res.status(errorCode).send({
