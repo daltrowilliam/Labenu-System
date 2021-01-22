@@ -14,8 +14,19 @@ export const PostMission = async(req: Request,res: Response): Promise<any> =>{
          throw new Error("O valor do módulo deve ser entre 1 e 7.")
       }
 
-      await createMission(
-         req.body.name,
+      let newName = req.body.name
+      if (req.body.period) {
+         if (req.body.period!=="night" && req.body.period!=="day") {
+            errorCode = 422;
+            throw new Error("Período inválido")
+         }
+      }
+      if (req.body.period==="night") {
+         newName = `${req.body.name}-na-night`
+      }
+
+         await createMission(
+         newName,
          req.body.start_date,
          req.body.end_date,
          req.body.module

@@ -7,7 +7,7 @@ export default async function createMission(
     module: number | undefined
 ):Promise<any> {
     const result = await connection
-    .insert({
+      .insert({
         id: Math.round(Date.now()/10000),
         name: name,
         start_date: start_date,
