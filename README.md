@@ -1,8 +1,8 @@
-### LabenuSystem:
+# LabenuSystem:
 
-# Aplicação de backend para gerenciamento de uma instituição de ensino.
+## Aplicação de backend para gerenciamento de uma instituição de ensino.
 
-# Tecnologias: Node JS, Typescript, Express, Mysql.
+### Tecnologias: Node JS, Typescript, Express, Mysql.
 
 Entidades:
 
