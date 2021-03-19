@@ -1,4 +1,4 @@
-# LabenuSystem:
+# LabenuSystem
 
 ## Aplicação de backend para gerenciamento de uma instituição de ensino.
 
